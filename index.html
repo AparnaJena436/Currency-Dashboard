@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FX Pulse - Currency Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <header class="header">
+      <div class="logo-group">
+        <h1>🌐 FX Pulse Dashboard</h1>
+      </div>
+      <p class="subtitle">Real-time exchange rates & 30-day currency trends</p>
+    </header>
+
+    <div class="grid-layout">
+      <section class="card">
+        <h2>💵 Currency Converter</h2>
+        <div class="input-group">
+          <label for="amount">Amount</label>
+          <input type="number" id="amount" value="100" min="0" />
+        </div>
+
+        <div class="selectors-row">
+          <div class="input-group">
+            <label for="fromCurrency">From</label>
+            <select id="fromCurrency"></select>
+          </div>
+
+          <button id="swapBtn" class="swap-btn" title="Swap currencies">⇄</button>
+
+          <div class="input-group">
+            <label for="toCurrency">To</label>
+            <select id="toCurrency"></select>
+          </div>
+        </div>
+
+        <div class="result-box">
+          <div id="convertedValue" class="converted-val">Loading...</div>
+          <div id="rateDetail" class="rate-detail">Fetching live rates</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>🌍 Live Market Rates (<span id="baseWatchlistSymbol">USD</span>)</h2>
+        <div id="watchlistGrid" class="watchlist-grid">
+          <div class="watch-item">Loading rates...</div>
+        </div>
+      </section>
+    </div>
+
+    <section class="card chart-card">
+      <h2>📈 30-Day Rate History</h2>
+      <div class="chart-wrapper">
+        <canvas id="rateChart"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
