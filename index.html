@@ -4,11 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FX Pulse - Currency Dashboard</title>
-  
-  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="style.css" />
-  
-  <!-- Chart.js Library (Loaded via CDN, no download required) -->
+  <!-- Chart.js CDN -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
@@ -54,7 +51,7 @@
       <section class="card">
         <h2>🌍 Live Market Rates (<span id="baseWatchlistSymbol">USD</span>)</h2>
         <div id="watchlistGrid" class="watchlist-grid">
-          <div class="loading-state">Loading rates...</div>
+          <div class="watch-item">Loading rates...</div>
         </div>
       </section>
     </div>
@@ -68,7 +65,6 @@
     </section>
   </div>
 
-  <!-- JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
